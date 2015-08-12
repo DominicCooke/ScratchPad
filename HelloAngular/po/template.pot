@@ -1,0 +1,13 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: part12-multi-language-support.html:13
+msgid "We want to test globalizaiton and localization."
+msgstr ""
+
+#: part12-multi-language-support.html:12
+msgid "Welcome ladies and gentlemen!"
+msgstr ""

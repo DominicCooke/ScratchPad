@@ -1,0 +1,74 @@
+﻿@model IEnumerable<AddressBook.Domain.Address>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstLineOfAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondLineOfAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThirdLineOfAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstLineOfAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondLineOfAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdLineOfAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { item.AddressID })
+            </td>
+            <td class="text-center">
+                @using (Html.BeginForm("Delete", "Address"))
+                {
+                    @Html.Hidden("AddressID", item.AddressID)
+                    <input type="submit"
+                           class="btn btn-default btn-xs"
+                           value="Delete" />
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

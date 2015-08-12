@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Part 5 - Pushing data to the server</title>
+    <link href="app.css" rel="stylesheet" />
+</head>
+
+<body ng-app="my5App">
+    <div ng-controller="TaskListCtrl">
+        <div>
+            <ul>
+                <li ng-repeat="task in tasks">
+                    {{task.Name}} - {{task.Status}}
+                </li>
+            </ul>
+            <button ng-click="refresh()">Refresh</button>
+        </div>
+
+
+        <div ng-controller="NewTaskCtrl">
+            <label>Name</label>
+            <input type="text" ng-model="taskName" />
+            <button ng-click="createTask()">Create</button>
+        </div>
+
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="step5App.js"></script>
+
+</body>
+
+</html>

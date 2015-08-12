@@ -1,0 +1,74 @@
+﻿@model AddressBook.Domain.Address
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Address</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstLineOfAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstLineOfAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondLineOfAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondLineOfAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdLineOfAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThirdLineOfAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Part 16 - Forms </title>
+</head>
+
+<body ng-app="my16App">
+    <div>
+        <form name='loginForm' novalidate>
+
+            <label>User name:</label>
+            <input name='userName' type='text' ng-model='login.userName' required/>
+            <span>Valid: {{loginForm.userName.$valid}}</span>
+            <div ng-show='loginForm.userName.$invalid && loginForm.userName.$dirty' class='error'>
+                Must enter user name.</div>
+
+            <br>
+
+            <label>Password:</label>
+            <input name='password' type='password' ng-model='login.password' required/>
+            <span>Valid: {{loginForm.password.$valid}}</span>
+
+
+            <br>
+
+            <button ng-disabled='loginForm.$invalid'>Login</button>
+            <button ng-click='loginForm.$setPristine()'>Clear</button>
+        </form>
+        <div>
+            <h3>Some form properties</h3>
+            <div>The form is valid: {{loginForm.$valid}}</div>
+            <div>The form is invalid: {{loginForm.$invalid}}</div>
+            <div>The form is dirty: {{loginForm.$dirty}}</div>
+            <div>The form is pristine: {{loginForm.$pristine}}</div>
+        </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="step16App.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Part 14.5 - End to end tests </title>
+</head>
+
+<body ng-app="my14.5App">
+
+    <div ng-controller="TestCtrl">
+        <button id='loadStaff' ng-click='loadStaff()'>Load Staff</button>
+        <h1>Staff List</h1>
+        <ul>
+            <li class='item' ng-repeat="staff in staffList">{{staff.lastName}}</li>
+        </ul>
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="step14.5App.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Part 11 - Promises</title>
+    <link href="app.css" rel="stylesheet" />
+</head>
+
+<body ng-app="my11App">
+    <div ng-controller="SampleCtrl">
+        <div style="border:solid 1px black;">
+            <button ng-click="test()">Click me</button>
+            <br/>
+            <input type="checkbox" ng-model="fail" /> Fail
+        </div>
+        <div style="border:solid 1px black;">
+            <button ng-click="test2()">Click me 2</button>
+            <br/>
+            <input type="checkbox" ng-model="fail2" /> Fail
+            <br/> Status: {{status2}}
+        </div>
+    </div>
+    <div ng-controller="TestCtrl">
+        <div style="border: solid 1px black;">
+            <button ng-click="loadData()">Load data</button>
+            <br/>
+        </div>
+    </div>
+    <div ng-controller="ParallelCtrl">
+        <div style="border: solid 1px black;">
+            <button ng-click="loadTest()">Load test</button>
+            <input type="checkbox" ng-model="fail3" /> Fail
+            <br/> 
+            <input type="checkbox" ng-model="fail4" /> Fail
+            <br/> 
+            <input type="checkbox" ng-model="fail5" /> Fail
+            <br/>
+        </div>
+    </div>
+    <script src="angular.js"></script>
+    <script src="step11App.js"></script>
+
+</body>
+
+</html>

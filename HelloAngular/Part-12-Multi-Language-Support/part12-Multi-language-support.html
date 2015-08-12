@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Part 12 - Multi language support </title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-app="my12App">
+
+    <div ng-controller="TestCtrl">
+        <p translate> Welcome ladies and gentlemen!</p>
+        <p translate>We want to test globalizaiton and localization.</p>
+        <p translate>Here we don't have a translation...</p>
+        
+        <div>
+            <label translate>Username:</label>
+            <input type ="text" placeholder="{{'Enter your username'|translate}}"/><br/>
+            <label translate>Password:</label>
+            <input type="password" placeholder="{{'Enter your password'|translate}}"/>
+        </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+    <script src="step12App.js"></script>
+    <script src="translations.js"></script>
+
+</body>
+
+</html>
